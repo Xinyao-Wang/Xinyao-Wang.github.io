@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Xinyao Wang</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Xinyao Wang</h1>
+      <p>Student • US</p>
+      <nav>
+        <a href="#work" rel="noopener">Work</a>
+        <a href="#projects" rel="noopener">Projects</a>
+        <a href="#contact" rel="noopener">Contact</a>
+      </nav>
+    </header>
+
+    <section id="work">
+      <h2>Work</h2>
+      <p>Studying and exploring technology.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Project A:</strong> Short description and link.</li>
+        <li><strong>Project B:</strong> Short description and link.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="https://www.linkedin.com" rel="noopener noreferrer">LinkedIn</a></p>
+    </section>
+
+    <footer>
+      <small>© <span id="y"></span> Xinyao Wang</small>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
