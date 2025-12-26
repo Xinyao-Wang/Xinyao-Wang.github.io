@@ -13,63 +13,105 @@
   <main>
     <header>
       <h1>Xinyao Wang</h1>
-      <p>PhD candidate in Mechanical Engineering at UC Riverside developing learning-based control models for pneumatic soft wearable robotics.</p>
+      <p>
+        PhD candidate in Mechanical Engineering at UC Riverside working on
+        physics-structured, learning-based modeling and control of soft robotic systems.
+      </p>
       <nav>
-        <a href="#about" rel="noopener">About</a>
-        <a href="#projects" rel="noopener">Projects</a>
-        <a href="#skills" rel="noopener">Skills</a>
-        <a href="#education" rel="noopener">Education</a>
-        <a href="#publications" rel="noopener">Publications</a>
-        <a href="#teaching" rel="noopener">Teaching</a>
-        <a href="#awards" rel="noopener">Awards</a>
-        <a href="#contact" rel="noopener">Contact</a>
+        <a href="#about">About</a>
+        <a href="#projects">Research Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <section id="about">
       <h2>About</h2>
-      <p>I am a PhD candidate in Mechanical Engineering at UC Riverside. My research focuses on learning-based control methods for human-assistive soft wearable robots driven by pneumatic artificial muscles. I aim to advance safe and adaptive robotic assistance for rehabilitation and daily movement support.</p>
+      <p>
+        I am a PhD candidate in Mechanical Engineering at UC Riverside. My research focuses on
+        dynamic modeling and control of antagonistic soft actuators, with an emphasis on
+        equilibrium point and impedance modulation for wearable and human-interactive robots.
+      </p>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Selected Research Projects</h2>
 
-      <h3>Pneumatic Soft Wearable Robot</h3>
-      <p>Learning-based dynamic modeling and control of antagonistic pneumatic artificial muscles for upper-limb assistance.</p>
+      <details>
+        <summary>Physics-Based Generative Modeling of Antagonistic Soft Actuators</summary>
+        <p>
+          Developed a physics-based generative modeling framework for antagonistic pneumatic
+          artificial muscle (PAM) joints using experimentally characterized single-actuator
+          force and pressure relationships.
+        </p>
+        <ul>
+          <li>Derived joint equilibrium positions and effective stiffness using equilibrium theory.</li>
+          <li>Formulated inverse mappings from desired equilibrium point and impedance to actuator inputs.</li>
+          <li>Evaluated performance on physical systems and analyzed limitations due to actuator mismatch and linear assumptions.</li>
+        </ul>
+      </details>
 
-      <h3>SMA Robotic Glove</h3>
-      <p>Designed and prototyped a soft robotic glove powered by shape-memory-alloy actuators with sensor-based finger motion tracking.</p>
+      <details>
+        <summary>Event-Switched Dynamic Modeling of Actuator Hysteresis</summary>
+        <p>
+          Investigated hysteresis effects in pneumatic artificial muscles using dynamic models
+          with motion-direction-dependent parameter switching.
+        </p>
+        <ul>
+          <li>Represented loading and unloading behavior through shared system states with switched parameters.</li>
+          <li>Demonstrated that event-based switching enables hysteresis to emerge in dynamic responses.</li>
+          <li>Identified scalability and identifiability challenges limiting practical system identification.</li>
+        </ul>
+      </details>
 
-      <h3>Robot-Cloud Communication Library</h3>
-      <p>Contributed to a Python-based system for distributed robot–cloud data streaming (IEEE PerCom Workshops 2021).</p>
-      
+      <details>
+        <summary>Hybrid Neural ODE Modeling of Antagonistic Actuator Dynamics</summary>
+        <p>
+          Developed a physics-structured neural ordinary differential equation (Neural ODE)
+          model to capture nonlinear and rate-dependent dynamics of antagonistic soft actuators.
+        </p>
+        <ul>
+          <li>Embedded known mechanical and pneumatic structure while learning unmodeled effects.</li>
+          <li>Derived an inverse formulation enabling equilibrium point and impedance modulation.</li>
+          <li>Validated experimentally and compared performance against a physics-based model.</li>
+        </ul>
+      </details>
+
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>C, Python, MATLAB, Arduino</li>
-        <li>SOLIDWORKS, Autodesk EAGLE</li>
-        <li>3D printer, milling machine, Voltera</li>
+        <li>Control and Modeling: dynamic systems, impedance control, system identification</li>
+        <li>Programming: Python, C, MATLAB, Arduino</li>
+        <li>Design and Prototyping: SOLIDWORKS, Autodesk EAGLE, rapid prototyping</li>
       </ul>
     </section>
 
     <section id="education">
       <h2>Education</h2>
       <ul>
-        <li>PhD, Mechanical Engineering — UC Riverside (2021 – Present)</li>
-        <li>MS, Mechanical Engineering — UC Riverside (2020 – 2021)</li>
-        <li>BS, Automotive Engineering — Wuhan University of Technology (2016 – 2020)</li>
+        <li>PhD, Mechanical Engineering — UC Riverside (2021–Present)</li>
+        <li>MS, Mechanical Engineering — UC Riverside (2020–2021)</li>
+        <li>BS, Automotive Engineering — Wuhan University of Technology (2016–2020)</li>
       </ul>
     </section>
 
     <section id="publications">
       <h2>Publications</h2>
       <p>
-        Y. Zhang, J. Sun, C. Ouyang, M. Chen, <strong>X. Wang</strong>, Q. Wang,
-        “RCC: A Distributed Data Streaming Software Library for Robot-Cloud Platforms,”
+        Y. Zhang, J. Sun, C. Ouyang, M. Chen, <strong>X. Wang</strong>, Q. Wang.<br>
+        “RCC: A Distributed Data Streaming Software Library for Robot-Cloud Platforms.”<br>
         <em>IEEE PerCom Workshops</em>, 2021.
         <a href="https://ieeexplore.ieee.org/abstract/document/9431122" rel="noopener noreferrer">Link</a>
+      </p>
+      <p>
+        <em>Manuscript in preparation:</em> Hybrid Neural ODE for Impedance Modulation of
+        Antagonistic Pneumatic Artificial Muscle Joints.
       </p>
     </section>
 
@@ -85,8 +127,8 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p><a href="https://github.com/Xinyao-Wang" rel="noopener noreferrer">GitHub</a></p>
-      <p><a href="https://www.linkedin.com/in/xinyao-wang-772312224/" rel="noopener noreferrer">LinkedIn</a></p>
+      <p><a href="https://github.com/Xinyao-Wang">GitHub</a></p>
+      <p><a href="https://www.linkedin.com/in/xinyao-wang-772312224/">LinkedIn</a></p>
     </section>
 
     <footer>
