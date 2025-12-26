@@ -5,161 +5,254 @@
   <title>Xinyao Wang</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'">
-  <link rel="preload" href="styles.css" as="style">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:;
+                 style-src 'self' 'unsafe-inline';
+                 frame-src 'self';
+                 base-uri 'none';
+                 form-action 'none'">
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Minimal CSS addition for Option 2 -->
   <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 1.5rem;
+      line-height: 1.5;
+    }
+
+    nav a { margin-right: 0.8em; }
+
+    details { margin-bottom: 1em; }
+
     details summary {
       cursor: pointer;
     }
-    details summary .hint {
+
+    .hint {
       font-size: 0.85em;
       color: #666;
       margin-left: 0.3em;
+    }
+
+    .poster-btn {
+      margin-top: 0.4em;
+      padding: 0.35em 0.6em;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+
+    /* ===== Modal ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 1000;
+    }
+
+    .modal-content {
+      position: relative;
+      width: 85%;
+      height: 85%;
+      margin: 4% auto;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4em 0.6em;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .modal-header a {
+      font-size: 0.9em;
+    }
+
+    .close-btn {
+      font-size: 22px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .modal iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <header>
-      <h1>Xinyao Wang</h1>
-      <p>
-        PhD candidate in Mechanical Engineering at UC Riverside working on
-        physics-structured, learning-based modeling and control of soft robotic systems.
-      </p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Research Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am a PhD candidate in Mechanical Engineering at UC Riverside. My research focuses on
-        dynamic modeling and control of antagonistic soft actuators, with an emphasis on
-        equilibrium point and impedance modulation for wearable and human-interactive robots.
-      </p>
-    </section>
+<header>
+  <h1>Xinyao Wang</h1>
+  <p>
+    PhD candidate in Mechanical Engineering at UC Riverside working on
+    physics-structured, learning-based modeling and control of soft robotic systems.
+  </p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Research Projects</a>
+    <a href="#posters">Posters</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section id="projects">
-      <h2>Selected Research Projects</h2>
+<section id="about">
+  <h2>About</h2>
+  <p>
+    My research focuses on dynamic modeling and control of antagonistic soft actuators,
+    with an emphasis on equilibrium point and impedance modulation for wearable and
+    human-interactive robotic systems.
+  </p>
+</section>
 
-      <details>
-        <summary>
-          Physics-Based Generative Modeling of Antagonistic Soft Actuators
-          <span class="hint">(click to expand)</span>
-        </summary>
-        <p>
-          Developed a physics-based generative modeling framework for antagonistic pneumatic
-          artificial muscle (PAM) joints using experimentally characterized single-actuator
-          force and pressure relationships.
-        </p>
-        <ul>
-          <li>Derived joint equilibrium positions and effective stiffness using equilibrium theory.</li>
-          <li>Formulated inverse mappings from desired equilibrium point and impedance to actuator inputs.</li>
-          <li>Evaluated performance on physical systems and analyzed limitations due to actuator mismatch and linear assumptions.</li>
-        </ul>
-      </details>
+<section id="projects">
+  <h2>Selected Research Projects</h2>
 
-      <details>
-        <summary>
-          Event-Switched Dynamic Modeling of Actuator Hysteresis
-          <span class="hint">(click to expand)</span>
-        </summary>
-        <p>
-          Investigated hysteresis effects in pneumatic artificial muscles using dynamic models
-          with motion-direction-dependent parameter switching.
-        </p>
-        <ul>
-          <li>Represented loading and unloading behavior through shared system states with switched parameters.</li>
-          <li>Demonstrated that event-based switching enables hysteresis to emerge in dynamic responses.</li>
-          <li>Identified scalability and identifiability challenges limiting practical system identification.</li>
-        </ul>
-      </details>
+  <details>
+    <summary>Physics-Based Generative Modeling of Antagonistic Soft Actuators
+      <span class="hint">(click to expand)</span>
+    </summary>
+    <p>Generative modeling of antagonistic PAM joints using equilibrium theory.</p>
+  </details>
 
-      <details>
-        <summary>
-          Hybrid Neural ODE Modeling of Antagonistic Actuator Dynamics
-          <span class="hint">(click to expand)</span>
-        </summary>
-        <p>
-          Developed a physics-structured neural ordinary differential equation (Neural ODE)
-          model to capture nonlinear and rate-dependent dynamics of antagonistic soft actuators.
-        </p>
-        <ul>
-          <li>Embedded known mechanical and pneumatic structure while learning unmodeled effects.</li>
-          <li>Derived an inverse formulation enabling equilibrium point and impedance modulation.</li>
-          <li>Validated experimentally and compared performance against a physics-based model.</li>
-        </ul>
-      </details>
+  <details>
+    <summary>Event-Switched Dynamic Modeling of Actuator Hysteresis
+      <span class="hint">(click to expand)</span>
+    </summary>
+    <p>Dynamic hysteresis modeling via motion-direction-dependent switching.</p>
+  </details>
 
-    </section>
+  <details>
+    <summary>Hybrid Neural ODE Modeling of Antagonistic Actuator Dynamics
+      <span class="hint">(click to expand)</span>
+    </summary>
+    <p>Physics-structured Neural ODE enabling equilibrium and impedance modulation.</p>
+  </details>
+</section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Control and Modeling: dynamic systems, impedance control, system identification</li>
-        <li>Programming: Python, C, MATLAB, Arduino</li>
-        <li>Design and Prototyping: SOLIDWORKS, Autodesk EAGLE, rapid prototyping</li>
-      </ul>
-    </section>
+<section id="posters">
+  <h2>Posters & Presentations</h2>
 
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>PhD, Mechanical Engineering — UC Riverside (2021–Present)</li>
-        <li>MS, Mechanical Engineering — UC Riverside (2020–2021)</li>
-        <li>BS, Automotive Engineering — Wuhan University of Technology (2016–2020)</li>
-      </ul>
-    </section>
+  <details class="poster">
+    <summary>Model-Based Impedance Modulation of Antagonistic PAMs
+      <span class="hint">(view poster)</span>
+    </summary>
+    <p>MEGSA 2023; IEEE/ASME AIM 2023.</p>
+    <button class="poster-btn" data-pdf="posters/impedance_modulation_pam.pdf">
+      Open poster
+    </button>
+  </details>
 
-    <section id="publications">
-      <h2>Publications</h2>
-      <p>
-        Y. Zhang, J. Sun, C. Ouyang, M. Chen, <strong>X. Wang</strong>, Q. Wang.<br>
-        “RCC: A Distributed Data Streaming Software Library for Robot-Cloud Platforms.”<br>
-        <em>IEEE PerCom Workshops</em>, 2021.
-        <a href="https://ieeexplore.ieee.org/abstract/document/9431122" rel="noopener noreferrer">Link</a>
-      </p>
-      <p>
-        <em>Manuscript in preparation:</em>
-        Hybrid Neural ODE for Impedance Modulation of Antagonistic Pneumatic Artificial Muscle Joints.
-      </p>
-    </section>
+  <details class="poster">
+    <summary>Spinal-Like Stretch Reflex Enhances Impedance Modulation Range
+      <span class="hint">(view poster)</span>
+    </summary>
+    <p>MEGSA 2024.</p>
+    <button class="poster-btn" data-pdf="posters/stretch_reflex_pam.pdf">
+      Open poster
+    </button>
+  </details>
 
-    <section id="teaching">
-      <h2>Teaching</h2>
-      <p>Teaching Assistant — Introduction to Mechatronics (ME133), UC Riverside, Winter 2023</p>
-    </section>
+  <details class="poster">
+    <summary>Direct Impedance Modulation of Passive Antagonistic PAMs
+      <span class="hint">(view poster)</span>
+    </summary>
+    <p>SCR Symposium 2024.</p>
+    <button class="poster-btn" data-pdf="posters/passive_impedance_pam.pdf">
+      Open poster
+    </button>
+  </details>
+</section>
 
-    <section id="awards">
-      <h2>Awards</h2>
-      <p>Lung–Wen Tsai Memorial Award, Best Poster Design, MEGSA Symposium, UC Riverside (2023)</p>
-    </section>
+<section id="publications">
+  <h2>Publications</h2>
+  <p>
+    Y. Zhang et al., <strong>X. Wang</strong>.<br>
+    <em>IEEE PerCom Workshops</em>, 2021.
+  </p>
+</section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><a href="https://github.com/Xinyao-Wang">GitHub</a></p>
-      <p><a href="https://www.linkedin.com/in/xinyao-wang-772312224/">LinkedIn</a></p>
-    </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p><a href="https://github.com/Xinyao-Wang">GitHub</a></p>
+  <p><a href="https://www.linkedin.com/in/xinyao-wang-772312224/">LinkedIn</a></p>
+</section>
 
-    <footer>
-      <small>© <span id="y"></span> Xinyao Wang — UC Riverside</small>
-    </footer>
-  </main>
+<footer>
+  <small>© <span id="y"></span> Xinyao Wang — UC Riverside</small>
+</footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+<!-- ===== Modal ===== -->
+<div id="pdf-modal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <div class="modal-header">
+      <a id="download-link" href="#" download>Download PDF</a>
+      <button class="close-btn" aria-label="Close">&times;</button>
+    </div>
+    <iframe id="pdf-frame"></iframe>
+  </div>
+</div>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  const modal = document.getElementById('pdf-modal');
+  const frame = document.getElementById('pdf-frame');
+  const downloadLink = document.getElementById('download-link');
+
+  // Auto-collapse other posters
+  document.querySelectorAll('details.poster').forEach(d => {
+    d.addEventListener('toggle', () => {
+      if (d.open) {
+        document.querySelectorAll('details.poster').forEach(o => {
+          if (o !== d) o.removeAttribute('open');
+        });
+      }
+    });
+  });
+
+  // Open modal
+  document.querySelectorAll('.poster-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pdf = btn.dataset.pdf;
+      frame.src = pdf;
+      downloadLink.href = pdf;
+      modal.style.display = 'block';
+      modal.setAttribute('aria-hidden', 'false');
+    });
+  });
+
+  // Close modal
+  function closeModal() {
+    frame.src = '';
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  document.querySelector('.close-btn').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+
+  // ESC key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
+</script>
+
 </body>
 </html>
