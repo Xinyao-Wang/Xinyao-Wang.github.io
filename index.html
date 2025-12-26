@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data:;
+        content="default-src 'self';
+                 img-src 'self' data:;
                  style-src 'self' 'unsafe-inline';
                  frame-src 'self';
                  base-uri 'none';
@@ -121,21 +122,24 @@
   <h2>Selected Research Projects</h2>
 
   <details>
-    <summary>Physics-Based Generative Modeling of Antagonistic Soft Actuators
+    <summary>
+      Physics-Based Generative Modeling of Antagonistic Soft Actuators
       <span class="hint">(click to expand)</span>
     </summary>
     <p>Generative modeling of antagonistic PAM joints using equilibrium theory.</p>
   </details>
 
   <details>
-    <summary>Event-Switched Dynamic Modeling of Actuator Hysteresis
+    <summary>
+      Event-Switched Dynamic Modeling of Actuator Hysteresis
       <span class="hint">(click to expand)</span>
     </summary>
     <p>Dynamic hysteresis modeling via motion-direction-dependent switching.</p>
   </details>
 
   <details>
-    <summary>Hybrid Neural ODE Modeling of Antagonistic Actuator Dynamics
+    <summary>
+      Hybrid Neural ODE Modeling of Antagonistic Actuator Dynamics
       <span class="hint">(click to expand)</span>
     </summary>
     <p>Physics-structured Neural ODE enabling equilibrium and impedance modulation.</p>
@@ -146,32 +150,38 @@
   <h2>Posters & Presentations</h2>
 
   <details class="poster">
-    <summary>Model-Based Impedance Modulation of Antagonistic PAMs
+    <summary>
+      Model-Based Impedance Modulation of Antagonistic Pneumatic Artificial Muscles
       <span class="hint">(view poster)</span>
     </summary>
-    <p>MEGSA 2023; IEEE/ASME AIM 2023.</p>
-    <button class="poster-btn" data-pdf="posters/impedance_modulation_pam.pdf">
-      Open poster
+    <p>IEEE/ASME AIM Conference, 2023.</p>
+    <button class="poster-btn"
+            data-pdf="posters/2023%20AIM%20Poster.pdf">
+      Open poster (PDF)
     </button>
   </details>
 
   <details class="poster">
-    <summary>Spinal-Like Stretch Reflex Enhances Impedance Modulation Range
+    <summary>
+      Spinal-Like Stretch Reflex Enhances Impedance Modulation Range
       <span class="hint">(view poster)</span>
     </summary>
-    <p>MEGSA 2024.</p>
-    <button class="poster-btn" data-pdf="posters/stretch_reflex_pam.pdf">
-      Open poster
+    <p>MEGSM Symposium, 2024.</p>
+    <button class="poster-btn"
+            data-pdf="posters/2024%20MEGSM%20Poster.pdf">
+      Open poster (PDF)
     </button>
   </details>
 
   <details class="poster">
-    <summary>Direct Impedance Modulation of Passive Antagonistic PAMs
+    <summary>
+      Direct Impedance Modulation of Passive Antagonistic PAMs
       <span class="hint">(view poster)</span>
     </summary>
-    <p>SCR Symposium 2024.</p>
-    <button class="poster-btn" data-pdf="posters/passive_impedance_pam.pdf">
-      Open poster
+    <p>SCR Symposium, 2024.</p>
+    <button class="poster-btn"
+            data-pdf="posters/2024%20SCR%20Poster.pdf">
+      Open poster (PDF)
     </button>
   </details>
 </section>
@@ -179,7 +189,7 @@
 <section id="publications">
   <h2>Publications</h2>
   <p>
-    Y. Zhang et al., <strong>X. Wang</strong>.<br>
+    Y. Zhang, J. Sun, C. Ouyang, M. Chen, <strong>X. Wang</strong>, Q. Wang.<br>
     <em>IEEE PerCom Workshops</em>, 2021.
   </p>
 </section>
@@ -246,7 +256,7 @@
     if (e.target === modal) closeModal();
   });
 
-  // ESC key
+  // ESC key closes modal
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && modal.style.display === 'block') {
       closeModal();
