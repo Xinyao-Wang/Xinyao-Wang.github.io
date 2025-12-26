@@ -8,7 +8,20 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Minimal CSS addition for Option 2 -->
+  <style>
+    details summary {
+      cursor: pointer;
+    }
+    details summary .hint {
+      font-size: 0.85em;
+      color: #666;
+      margin-left: 0.3em;
+    }
+  </style>
 </head>
+
 <body>
   <main>
     <header>
@@ -42,7 +55,10 @@
       <h2>Selected Research Projects</h2>
 
       <details>
-        <summary>Physics-Based Generative Modeling of Antagonistic Soft Actuators</summary>
+        <summary>
+          Physics-Based Generative Modeling of Antagonistic Soft Actuators
+          <span class="hint">(click to expand)</span>
+        </summary>
         <p>
           Developed a physics-based generative modeling framework for antagonistic pneumatic
           artificial muscle (PAM) joints using experimentally characterized single-actuator
@@ -56,7 +72,10 @@
       </details>
 
       <details>
-        <summary>Event-Switched Dynamic Modeling of Actuator Hysteresis</summary>
+        <summary>
+          Event-Switched Dynamic Modeling of Actuator Hysteresis
+          <span class="hint">(click to expand)</span>
+        </summary>
         <p>
           Investigated hysteresis effects in pneumatic artificial muscles using dynamic models
           with motion-direction-dependent parameter switching.
@@ -69,7 +88,10 @@
       </details>
 
       <details>
-        <summary>Hybrid Neural ODE Modeling of Antagonistic Actuator Dynamics</summary>
+        <summary>
+          Hybrid Neural ODE Modeling of Antagonistic Actuator Dynamics
+          <span class="hint">(click to expand)</span>
+        </summary>
         <p>
           Developed a physics-structured neural ordinary differential equation (Neural ODE)
           model to capture nonlinear and rate-dependent dynamics of antagonistic soft actuators.
@@ -110,8 +132,8 @@
         <a href="https://ieeexplore.ieee.org/abstract/document/9431122" rel="noopener noreferrer">Link</a>
       </p>
       <p>
-        <em>Manuscript in preparation:</em> Hybrid Neural ODE for Impedance Modulation of
-        Antagonistic Pneumatic Artificial Muscle Joints.
+        <em>Manuscript in preparation:</em>
+        Hybrid Neural ODE for Impedance Modulation of Antagonistic Pneumatic Artificial Muscle Joints.
       </p>
     </section>
 
