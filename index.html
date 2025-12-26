@@ -294,7 +294,7 @@
   document.querySelectorAll('.poster-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const pdf = btn.dataset.pdf;
-      frame.src = pdf;
+      frame.data = pdf;
       downloadLink.href = pdf;
       modal.style.display = 'block';
       modal.setAttribute('aria-hidden', 'false');
@@ -303,7 +303,7 @@
 
   // Close modal
   function closeModal() {
-    frame.src = '';
+    frame.data = '';
     modal.style.display = 'none';
     modal.setAttribute('aria-hidden', 'true');
   }
