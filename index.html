@@ -10,6 +10,7 @@
                  img-src 'self' data:;
                  style-src 'self' 'unsafe-inline';
                  frame-src 'self';
+                 object-src 'self';
                  base-uri 'none';
                  form-action 'none'">
 
@@ -80,10 +81,10 @@
       cursor: pointer;
     }
 
-    .modal iframe {
+    .modal embed {
       flex: 1;
       width: 100%;
-      border: none;
+      height: 100%;
     }
   </style>
 </head>
@@ -222,7 +223,7 @@
       <span class="hint">(view poster)</span>
     </summary>
     <p>IEEE/ASME AIM Conference, 2023.</p>
-    <button class="poster-btn" data-pdf="posters/2023%20AIM%20Poster.pdf">
+    <button class="poster-btn" data-pdf="posters/2023_AIM_Poster.pdf">
       Open poster (PDF)
     </button>
   </details>
@@ -233,7 +234,7 @@
       <span class="hint">(view poster)</span>
     </summary>
     <p>MEGSM Symposium, 2024.</p>
-    <button class="poster-btn" data-pdf="posters/2024%20MEGSM%20Poster.pdf">
+    <button class="poster-btn" data-pdf="posters/2024_MEGSM_Poster.pdf">
       Open poster (PDF)
     </button>
   </details>
@@ -244,7 +245,7 @@
       <span class="hint">(view poster)</span>
     </summary>
     <p>SCR Symposium, 2024.</p>
-    <button class="poster-btn" data-pdf="posters/2024%20SCR%20Poster.pdf">
+    <button class="poster-btn" data-pdf="posters/2024_SCR_Poster.pdf">
       Open poster (PDF)
     </button>
   </details>
@@ -267,7 +268,7 @@
       <a id="download-link" href="#" download>Download PDF</a>
       <button class="close-btn" aria-label="Close">&times;</button>
     </div>
-    <iframe id="pdf-frame"></iframe>
+    <embed id="pdf-frame" type="application/pdf">
   </div>
 </div>
 
