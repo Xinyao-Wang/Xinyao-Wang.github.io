@@ -122,20 +122,84 @@
 <section id="projects">
   <h2>Selected Research Projects</h2>
 
-  <details>
+  <details open>
     <summary>
-      Physics-Based Generative Modeling of Antagonistic Soft Actuators
+      Physics-Structured Neural ODE Modeling for Antagonistic PAM Joints
       <span class="hint">(click to expand)</span>
     </summary>
     <p>
-      Developed a physics-based generative modeling framework for antagonistic pneumatic
-      artificial muscle (PAM) joints using experimentally characterized single-actuator
-      force and pressure relationships.
+      Developed and experimentally validated a physics-structured Neural ODE model
+      for antagonistic pneumatic artificial muscle (PAM) joints, enabling direct
+      equilibrium-point and impedance modulation.
     </p>
     <ul>
-      <li>Derived joint equilibrium positions and effective stiffness using equilibrium theory.</li>
-      <li>Formulated inverse mappings from desired equilibrium point and impedance to actuator inputs.</li>
-      <li>Evaluated performance on physical systems and analyzed limitations due to actuator mismatch and linear assumptions.</li>
+      <li>
+        Embedded mechanical and pneumatic structure while learning unmodeled,
+        rate-dependent dynamics from hardware data.
+      </li>
+      <li>
+        Deployed the learned inverse model via lookup tables for real-time
+        closed-loop control on physical hardware.
+      </li>
+      <li>
+        Reduced joint motion phase lag from −11.6° to −5.8° and reduced
+        velocity-dependent stiffness variation from 3.24% to 0.60% for ≤1 Hz motion,
+        relative to a physics-only baseline.
+      </li>
+      <li>
+        Demonstrated model generalization by training on 29 conditions selected
+        from a 225-condition experimental dataset.
+      </li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>
+      Physics-Based Generative Modeling for Antagonistic PAM Joints
+      <span class="hint">(click to expand)</span>
+    </summary>
+    <p>
+      Developed a generative modeling framework for antagonistic PAM joints based on
+      experimentally characterized single-actuator properties.
+    </p>
+    <ul>
+      <li>
+        Derived joint equilibrium position and effective stiffness using equilibrium
+        theory.
+      </li>
+      <li>
+        Formulated inverse mappings from desired equilibrium point and impedance to
+        actuator inputs.
+      </li>
+      <li>
+        Identified mass, damping, and stiffness parameters directly from hardware
+        data using optimization-based system identification.
+      </li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>
+      Spinal-Like Stretch Reflex for Impedance Modulation
+      <span class="hint">(click to expand)</span>
+    </summary>
+    <p>
+      Explored a biologically inspired stretch reflex mechanism to augment impedance
+      modulation in antagonistic pneumatic artificial muscle joints.
+    </p>
+    <ul>
+      <li>
+        Implemented a velocity-dependent reflex feedback law layered on top of a
+        physics-based joint model.
+      </li>
+      <li>
+        Visual comparison of stiffness surfaces indicates up to an approximately
+        60% increase in achievable joint stiffness at matched equilibrium points.
+      </li>
+      <li>
+        Evaluated behavior through controlled experiments presented at the MEGSA
+        Symposium (2024).
+      </li>
     </ul>
   </details>
 
@@ -145,31 +209,54 @@
       <span class="hint">(click to expand)</span>
     </summary>
     <p>
-      Investigated hysteresis effects in pneumatic artificial muscles using dynamic models
-      with motion-direction-dependent parameter switching.
+      Modeled hysteresis in pneumatic artificial muscles using a switched dynamic
+      system with event-dependent parameters.
     </p>
     <ul>
-      <li>Represented loading and unloading behavior through shared system states with switched parameters.</li>
-      <li>Demonstrated that event-based switching enables hysteresis to emerge in dynamic responses.</li>
-      <li>Identified scalability and identifiability challenges limiting practical system identification.</li>
+      <li>
+        Represented loading and unloading behavior using shared system states with
+        motion-direction-dependent parameter switching.
+      </li>
+      <li>
+        Identified event-dependent force and dynamic parameters and validated
+        behavior under perturbation experiments on hardware.
+      </li>
+      <li>
+        Captured hysteresis behavior as an emergent property of event-switched
+        dynamics rather than imposing static hysteresis curves.
+      </li>
+      <li>
+        Analyzed identifiability and scalability limits affecting practical system
+        identification.
+      </li>
     </ul>
   </details>
 
   <details>
     <summary>
-      Hybrid Neural ODE Modeling of Antagonistic Actuator Dynamics
+      SMA-Actuated MRI-Compatible Wearable Exoskeleton
       <span class="hint">(click to expand)</span>
     </summary>
     <p>
-      Developed a physics-structured neural ordinary differential equation (Neural ODE)
-      model to capture nonlinear and rate-dependent dynamics of antagonistic soft actuators.
+      Designed and evaluated an MRI-compatible, SMA spring–driven antagonistic finger
+      exoskeleton for rehabilitation applications.
     </p>
     <ul>
-      <li>Embedded known mechanical and pneumatic structure while learning unmodeled effects.</li>
-      <li>Derived an inverse formulation enabling equilibrium point and impedance modulation.</li>
-      <li>Validated experimentally and compared performance against a physics-based model.</li>
+      <li>
+        Built and tested hardware prototypes with six actuators per finger
+        (three degrees of freedom).
+      </li>
+      <li>
+        Identified tendon friction and limited joint moment arms as dominant causes
+        of dead zones and insufficient torque at high flexion.
+      </li>
+      <li>
+        Integrated EM-based motion sensing to estimate joint angles where rigid
+        encoders were impractical.
+      </li>
     </ul>
   </details>
+
 </section>
 
 <section id="skills">
