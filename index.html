@@ -14,15 +14,24 @@
                  base-uri 'none';
                  form-action 'none'">
 
+  <link rel="stylesheet" href="styles.css">
 
   <style>
     .top-contact {
       font-size: 0.9em;
       margin-bottom: 0.5rem;
     }
-    
+
     .top-contact a {
       text-decoration: none;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 1.5rem;
+      line-height: 1.5;
     }
 
     nav a { margin-right: 0.8em; }
@@ -36,14 +45,14 @@
       border-bottom: 1px solid #ddd;
       font-size: 1rem;          /* match section text size */
     }
-    
+
     nav a {
       margin-right: 1em;
       font-weight: 600;
       color: #000;             /* force black */
       text-decoration: none;
     }
-    
+
     nav a:hover {
       text-decoration: underline;
     }
@@ -116,42 +125,39 @@
     details {
       margin-bottom: 1.4rem;   /* more vertical spacing */
     }
-    
+
     details summary {
       font-weight: 600;
       padding: 0.4rem 0;
       color: #222;             /* slightly lighter than pure black */
     }
-    
+
     details[open] summary {
       margin-bottom: 0.5rem;  /* space between title and bullets */
     }
-    
+
     details ul {
       margin-left: 1.5rem;   /* push bullets to the right */
       padding-left: 1rem;   /* extra indentation */
     }
-    
+
     details li {
       margin-bottom: 0.4rem;
     }
   </style>
-  <link rel="stylesheet" crossorigin href="/assets/index-CxXlzAVV.css">
 </head>
 
 <body>
 
-  <div class="container">
-
   <header>
     <h1>Xinyao Wang</h1>
-    
+
     <div class="top-contact">
       <a href="mailto:xinyaow6@gmail.com">xinyaow6@gmail.com</a> |
       <a href="https://github.com/Xinyao-Wang" target="_blank">GitHub</a> |
       <a href="https://www.linkedin.com/in/xinyao-wang-772312224/" target="_blank">LinkedIn</a>
     </div>
-    
+
   <nav>
     <a href="#About">About</a>
     <a href="#Research Projects">Research Projects</a>
@@ -241,13 +247,13 @@
       <li>Analyzed identifiability and scalability limits.</li>
     </ul>
   </details>
-  
+
   <details>
     <summary>
       SMA-Actuated MRI-Compatible Wearable Exoskeleton
       <span class="hint"></span>
     </summary>
-  
+
     <ul>
       <li>Designed an MRI-compatible antagonistic finger exoskeleton driven by SMA springs.</li>
       <li>Built and tested hardware prototypes with six actuators per finger (3 DOF).</li>
@@ -262,7 +268,7 @@
       Custom Pressure Control PCB for PAM Systems
       <span class="hint"></span>
     </summary>
-  
+
     <p>
       <strong>Repository:</strong>
       <a href="https://github.com/Xinyao-Wang/pcb-pressure-controller"
@@ -271,7 +277,7 @@
         github.com/Xinyao-Wang/pcb-pressure-controller
       </a>
     </p>
-  
+
     <ul>
       <li>Designed a custom PCB supporting 16 solenoid valves for multi-channel PAM actuation.</li>
       <li>Implemented 8-channel I2C pressure sensing with multiplexer to resolve address conflicts.</li>
@@ -442,6 +448,6 @@
     }
   });
 </script>
-</div>
+
 </body>
 </html>
